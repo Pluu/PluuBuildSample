@@ -1,5 +1,5 @@
 package com.pluu
 
-class StaticBuildConfiguration {
-    val path = "BuildConfig_Main_Path"
+object StaticBuildConfiguration {
+    val path: String get() = "BuildConfig > Main > Path"
 }

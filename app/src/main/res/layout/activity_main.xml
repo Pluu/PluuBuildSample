@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="[Flavor] Code Static" />
+        android:text="[Flavor] Load Object class getter" />
 
     <TextView
         android:id="@+id/tvStaticTextView"
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="[Flavor] Code Dynamic" />
+        android:text="[Flavor] Load class function" />
 
     <TextView
         android:id="@+id/tvDynamicTextView"

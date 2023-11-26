@@ -1,5 +1,5 @@
 package com.pluu
 
-class StaticBuildConfiguration {
-    val path = "Stub_Path"
+object StaticBuildConfiguration {
+    val path: String get() = "Stub > Path"
 }

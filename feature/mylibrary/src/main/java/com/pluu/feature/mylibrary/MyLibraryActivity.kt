@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.pluu.DynamicBuildConfiguration
+import com.pluu.FlavorBuildConfiguration
 import com.pluu.StaticBuildConfiguration
 import com.pluu.feature.mylibrary.databinding.ActivityMyLibraryBinding
 
@@ -16,9 +16,9 @@ class MyLibraryActivity : AppCompatActivity() {
         binding = ActivityMyLibraryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvStaticTextView.text = StaticBuildConfiguration().path
+        binding.tvStaticTextView.text = StaticBuildConfiguration.path
 
-        binding.tvDynamicTextView.text = DynamicBuildConfiguration().path()
+        binding.tvDynamicTextView.text = FlavorBuildConfiguration().path()
     }
 
     companion object {
