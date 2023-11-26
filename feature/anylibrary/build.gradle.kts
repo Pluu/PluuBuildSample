@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.pluu.feature.mylibrary"
+    namespace = "com.pluu.anylibrary"
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")
     }

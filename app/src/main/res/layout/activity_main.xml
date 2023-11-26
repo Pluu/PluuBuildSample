@@ -10,14 +10,73 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Pluu"
-        android:textSize="20sp" />
+        android:text="app"
+        android:textColor="#26A69A"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginVertical="20dp"
+        android:background="#CCC" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[Flavor] Resource" />
+
+    <TextView
+        style="@style/SampleCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Pluu" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="[Flavor] Code Static" />
+
+    <TextView
+        android:id="@+id/tvStaticTextView"
+        style="@style/SampleCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Sample" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="[Flavor] Code Dynamic" />
+
+    <TextView
+        android:id="@+id/tvDynamicTextView"
+        style="@style/SampleCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Sample" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginVertical="20dp"
+        android:background="#CCC" />
 
     <Button
         android:id="@+id/btnMoveFeature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Move" />
+        android:backgroundTint="#EC407A"
+        android:text="Move Feature 1" />
+
+    <Button
+        android:id="@+id/btnMoveFeature2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#42A5F5"
+        android:text="Move Feature 2" />
 
 </LinearLayout>

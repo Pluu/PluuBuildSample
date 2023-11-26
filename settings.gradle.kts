@@ -17,5 +17,6 @@ dependencyResolutionManagement {
 rootProject.name = "PluuBuildSample"
 include(":app")
 include(":feature:mylibrary")
+include(":feature:anylibrary")
 include(":shared:buildConfig")
 include(":shared:buildConfig-stub")

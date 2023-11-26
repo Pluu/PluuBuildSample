@@ -4,11 +4,21 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.pluu.DynamicBuildConfiguration
+import com.pluu.StaticBuildConfiguration
+import com.pluu.feature.mylibrary.databinding.ActivityMyLibraryBinding
 
 class MyLibraryActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMyLibraryBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_library)
+        binding = ActivityMyLibraryBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.tvStaticTextView.text = StaticBuildConfiguration.path
+
+        binding.tvDynamicTextView.text = DynamicBuildConfiguration.path
     }
 
     companion object {
