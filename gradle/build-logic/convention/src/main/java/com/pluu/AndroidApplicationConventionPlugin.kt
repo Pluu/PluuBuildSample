@@ -2,6 +2,7 @@ package com.pluu
 
 import com.android.build.api.dsl.ApplicationExtension
 import com.pluu.convention.utils.configureAndroid
+import com.pluu.convention.utils.configureFlavor
 import com.pluu.convention.utils.configureKotlin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -20,6 +21,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 configureAndroid(this)
                 defaultConfig.targetSdk = 34
                 configureKotlin()
+                configureFlavor(this)
             }
         }
     }
