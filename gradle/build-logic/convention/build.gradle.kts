@@ -23,5 +23,13 @@ gradlePlugin {
             id = "pluu.android.library"
             implementationClass = "com.pluu.AndroidLibraryConventionPlugin"
         }
+        register("sharedBuildConfig") {
+            id = "pluu.android.buildConfig"
+            implementationClass = "com.pluu.AndroidBuildConfigConventionPlugin"
+        }
+        register("sharedBuildConfigStub") {
+            id = "pluu.android.buildConfigStub"
+            implementationClass = "com.pluu.AndroidBuildConfigStubConventionPlugin"
+        }
     }
 }
