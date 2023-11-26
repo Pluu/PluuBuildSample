@@ -16,9 +16,9 @@ class MyLibraryActivity : AppCompatActivity() {
         binding = ActivityMyLibraryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvStaticTextView.text = StaticBuildConfiguration.path
+        binding.tvStaticTextView.text = StaticBuildConfiguration().path
 
-        binding.tvDynamicTextView.text = DynamicBuildConfiguration.path
+        binding.tvDynamicTextView.text = DynamicBuildConfiguration().path()
     }
 
     companion object {

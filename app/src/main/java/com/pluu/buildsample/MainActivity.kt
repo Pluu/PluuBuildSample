@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvStaticTextView.text = StaticBuildConfiguration.path
+        binding.tvStaticTextView.text = StaticBuildConfiguration().path
 
-        binding.tvDynamicTextView.text = DynamicBuildConfiguration.path
+        binding.tvDynamicTextView.text = DynamicBuildConfiguration().path()
 
         binding.btnMoveFeature.setOnClickListener {
             MyLibraryActivity.start(this)

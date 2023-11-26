@@ -1,5 +1,7 @@
 package com.pluu
 
-object DynamicBuildConfiguration {
-    const val path = "Stub_Dynamic_Path"
+class DynamicBuildConfiguration {
+    fun path(): String {
+        return "Stub_Dynamic_Path"
+    }
 }
