@@ -20,9 +20,14 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
+    implementation(project(mapOf("path" to ":feature:mylibrary")))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.goolge.material)
