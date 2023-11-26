@@ -48,10 +48,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:text="❌❌❌ [Flavor] Load Object class const-value" />
+
+    <TextView
+        android:id="@+id/tvStaticConstTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Sample" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="[Flavor] Load class function" />
 
     <TextView
-        android:id="@+id/tvDynamicTextView"
+        android:id="@+id/tvFlavorTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Sample" />
