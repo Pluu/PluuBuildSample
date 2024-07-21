@@ -27,7 +27,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 configureFlavor(this)
             }
 
-
             dependencies {
                 implementation(project(path =":shared:buildConfig"))
             }
