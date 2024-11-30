@@ -27,8 +27,8 @@ android {
 }
 
 dependencies {
-    implementation(project(mapOf("path" to ":feature:mylibrary")))
-    implementation(project(mapOf("path" to ":feature:anylibrary")))
+    implementation(projects.feature.mylibrary)
+    implementation(projects.feature.anylibrary)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.goolge.material)
