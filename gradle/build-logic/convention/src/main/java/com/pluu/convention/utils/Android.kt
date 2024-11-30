@@ -1,12 +1,12 @@
 package com.pluu.convention.utils
 
 import com.android.build.api.variant.AndroidComponentsExtension
-import com.pluu.ByteCodeJavaVersion
+import com.pluu.Const.ByteCodeJavaVersion
 import org.gradle.api.Project
 
 internal fun Project.configureAndroid(commonExtension: AGPCommonExtension) {
     commonExtension.apply {
-        compileSdk = 34
+        compileSdk = 35
 
         defaultConfig {
             minSdk = 24
