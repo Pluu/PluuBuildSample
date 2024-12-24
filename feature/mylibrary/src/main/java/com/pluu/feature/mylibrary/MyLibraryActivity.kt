@@ -17,8 +17,11 @@ class MyLibraryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tvStaticTextView.text = StaticBuildConfiguration.path
-
         binding.tvFlavorTextView.text = FlavorBuildConfiguration().path()
+
+        binding.btnMoveWeb.setOnClickListener {
+            SampleWebActivity.start(this, "file:///android_asset/real.html")
+        }
     }
 
     companion object {

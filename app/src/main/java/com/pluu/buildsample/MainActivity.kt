@@ -7,6 +7,7 @@ import com.pluu.StaticBuildConfiguration
 import com.pluu.anylibrary.AnySampleActivity
 import com.pluu.buildsample.databinding.ActivityMainBinding
 import com.pluu.feature.mylibrary.MyLibraryActivity
+import com.pluu.feature.mylibrary.SampleWebActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnMoveFeature2.setOnClickListener {
             AnySampleActivity.start(this)
+        }
+        binding.btnMoveWeb.setOnClickListener {
+            SampleWebActivity.start(this, "https://github.com/Pluu")
         }
     }
 }

@@ -3,6 +3,9 @@
 
     <application>
         <activity
+            android:name=".SampleWebActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyLibraryActivity"
             android:exported="false" />
     </application>

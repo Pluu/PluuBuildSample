@@ -68,4 +68,12 @@
         android:backgroundTint="#42A5F5"
         android:text="Move Feature 2" />
 
+    <Button
+        android:id="@+id/btnMoveWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#000000"
+        android:text="Move Web" />
+
 </LinearLayout>
