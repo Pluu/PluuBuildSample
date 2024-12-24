@@ -3,6 +3,7 @@ package com.pluu
 import com.android.build.api.dsl.LibraryExtension
 import com.pluu.convention.utils.configureAndroid
 import com.pluu.convention.utils.configureKotlin
+import com.pluu.convention.utils.consumerProguardFiles
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -19,10 +20,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             extensions.configure<LibraryExtension> {
                 configureAndroid(this)
                 configureKotlin()
-
-                defaultConfig {
-                    consumerProguardFiles("consumer-rules.pro")
-                }
+                consumerProguardFiles()
             }
         }
     }
