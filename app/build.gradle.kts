@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.pluu.android.application)
+    alias(libs.plugins.pluu.android.test)
 }
 
 android {

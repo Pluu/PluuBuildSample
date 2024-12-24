@@ -30,3 +30,4 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 # Plugins defined by this project
 pluu-android-application = { id = "pluu.android.application" }
 pluu-android-library = { id = "pluu.android.library" }
+pluu-android-test = { id = "pluu.android.test" }

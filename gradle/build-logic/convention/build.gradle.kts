@@ -23,6 +23,10 @@ gradlePlugin {
             id = libs.plugins.pluu.android.library.get().pluginId
             implementationClass = "com.pluu.AndroidLibraryConventionPlugin"
         }
+        register("androidTest") {
+            id = libs.plugins.pluu.android.test.get().pluginId
+            implementationClass = "com.pluu.AndroidTestConventionPlugin"
+        }
         register("sharedBuildConfig") {
             id = "pluu.android.buildConfig"
             implementationClass = "com.pluu.AndroidBuildConfigConventionPlugin"
