@@ -14,6 +14,16 @@ internal fun Project.configureAndroid(commonExtension: AGPCommonExtension) {
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
+        buildTypes {
+            getByName("release") {
+                isMinifyEnabled = false
+                proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+                )
+            }
+        }
+
         compileOptions {
             sourceCompatibility = ByteCodeJavaVersion
             targetCompatibility = ByteCodeJavaVersion

@@ -19,6 +19,10 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             extensions.configure<LibraryExtension> {
                 configureAndroid(this)
                 configureKotlin()
+
+                defaultConfig {
+                    consumerProguardFiles("consumer-rules.pro")
+                }
             }
         }
     }
