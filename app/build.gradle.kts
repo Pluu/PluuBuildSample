@@ -29,6 +29,8 @@ android {
 dependencies {
     implementation(projects.feature.mylibrary)
     implementation(projects.feature.anylibrary)
+    implementation(projects.shared.buildConfig)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.goolge.material)
