@@ -26,7 +26,4 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.goolge.material)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.androidx.test.espresso)
 }
