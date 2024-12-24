@@ -17,6 +17,7 @@ class AndroidTestConventionPlugin : Plugin<Project> {
                 "testImplementation"(libs.findLibrary("junit").get())
                 "androidTestImplementation"(libs.findLibrary("androidx-test-ext-junit").get())
                 "androidTestImplementation"(libs.findLibrary("androidx-test-espresso").get())
+                "androidTestImplementation"(libs.findLibrary("androidx-test-espresso-web").get())
             }
         }
     }
