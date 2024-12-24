@@ -24,35 +24,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="[Flavor] Resource" />
-
-    <TextView
-        style="@style/SampleCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Pluu" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="[Flavor] Load Object class getter" />
 
     <TextView
         android:id="@+id/tvStaticTextView"
-        style="@style/SampleCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Sample" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="❌❌❌ [Flavor] Load Object class const-value" />
-
-    <TextView
-        android:id="@+id/tvStaticConstTextView"
         style="@style/SampleCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
