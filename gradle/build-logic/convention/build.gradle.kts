@@ -16,11 +16,11 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = "pluu.android.application"
+            id = libs.plugins.pluu.android.application.get().pluginId
             implementationClass = "com.pluu.AndroidApplicationConventionPlugin"
         }
         register("androidLibrary") {
-            id = "pluu.android.library"
+            id = libs.plugins.pluu.android.library.get().pluginId
             implementationClass = "com.pluu.AndroidLibraryConventionPlugin"
         }
         register("sharedBuildConfig") {

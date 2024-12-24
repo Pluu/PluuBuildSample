@@ -1,5 +1,5 @@
 plugins {
-    id("pluu.android.application")
+    alias(libs.plugins.pluu.android.application)
 }
 
 android {
