@@ -14,6 +14,10 @@ internal fun Project.configureAndroid(commonExtension: AGPCommonExtension) {
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
+        testOptions {
+            animationsDisabled = true
+        }
+
         buildTypes {
             getByName("release") {
                 isMinifyEnabled = false
