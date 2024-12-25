@@ -26,10 +26,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="[Flavor] Load Object class getter" />
+        android:text="[Flavor] Load Object class > getter" />
 
     <TextView
         android:id="@+id/tvStaticTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Sample" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="❌❌❌ [Flavor] Load Object class > const" />
+
+    <TextView
+        android:id="@+id/tvStaticConstTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Sample" />
