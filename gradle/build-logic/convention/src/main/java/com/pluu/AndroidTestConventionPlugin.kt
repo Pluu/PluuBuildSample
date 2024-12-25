@@ -17,6 +17,7 @@ class AndroidTestConventionPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
             }
 
+            // Case 1.
             extensions.getByType(CommonExtension::class.java).apply {
                 sourceSets {
                     getByName("debug") {
@@ -34,6 +35,9 @@ class AndroidTestConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
+                // Case 2. 모듈 기준
+//                "debugImplementation"(project(":testing:assets_manual"))
+
                 "testImplementation"(libs.findLibrary("junit").get())
                 "androidTestImplementation"(libs.findLibrary("androidx-arch-core").get())
                 "androidTestImplementation"(libs.findLibrary("androidx-test-rules").get())
