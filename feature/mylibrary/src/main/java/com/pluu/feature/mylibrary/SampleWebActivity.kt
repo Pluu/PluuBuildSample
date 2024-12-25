@@ -3,6 +3,10 @@ package com.pluu.feature.mylibrary
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.webkit.WebResourceError
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
@@ -24,6 +28,9 @@ class SampleWebActivity : AppCompatActivity() {
             insets
         }
 
+        binding.webView.webViewClient = CustomWebViewClient()
+        binding.webView.settings.javaScriptEnabled = true
+
         val url = intent.getStringExtra("url").orEmpty()
         binding.webView.loadUrl(url)
     }
@@ -35,6 +42,19 @@ class SampleWebActivity : AppCompatActivity() {
                     putExtras(bundleOf("url" to url))
                 }
             )
+        }
+    }
+}
+
+class CustomWebViewClient : WebViewClient() {
+    override fun onReceivedError(
+        view: WebView,
+        request: WebResourceRequest,
+        error: WebResourceError
+    ) {
+        super.onReceivedError(view, request, error)
+        if (request.isForMainFrame) {
+            view.loadUrl("file:///android_asset/error.html")
         }
     }
 }
