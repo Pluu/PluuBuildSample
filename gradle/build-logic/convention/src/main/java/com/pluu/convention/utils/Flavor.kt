@@ -1,6 +1,5 @@
 package com.pluu.convention.utils
 
-import com.android.build.api.dsl.ApplicationProductFlavor
 import org.gradle.api.Project
 
 internal fun Project.configureFlavor(commonExtension: AGPCommonExtension) {
@@ -8,13 +7,9 @@ internal fun Project.configureFlavor(commonExtension: AGPCommonExtension) {
         flavorDimensions.add("default")
 
         productFlavors {
-            create("develop") {
-                if (this is ApplicationProductFlavor) {
-                    isDefault = true
-                }
-            }
-            create("develop_side") {}
-            create("production") {}
+            maybeCreate("develop")
+            maybeCreate("develop_side").matchingFallbacks.add("develop")
+            maybeCreate("production").matchingFallbacks.add("develop")
         }
     }
 }
