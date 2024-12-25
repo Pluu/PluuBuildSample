@@ -5,11 +5,11 @@ import com.pluu.Const.ByteCodeJavaVersion
 import org.gradle.api.Project
 
 internal fun Project.configureAndroid(commonExtension: AGPCommonExtension) {
-    commonExtension.apply {
+    with(commonExtension) {
         compileSdk = 35
 
         defaultConfig {
-            minSdk = 24
+            minSdk = 26
 
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
