@@ -27,16 +27,6 @@ class AndroidTestConventionPlugin : Plugin<Project> {
                 }
             }
 
-//            extensions.findByType(AndroidComponentsExtension::class.java)?.apply {
-//                onVariants {
-//                    if (it.name.endsWith("debug", ignoreCase = true)) {
-//                        it.sources.assets?.addStaticSourceDirectory(
-//                            File(rootDir, "testing/assets").path
-//                        )
-//                    }
-//                }
-//            }
-
             extensions.findByType(LibraryAndroidComponentsExtension::class.java)?.let {
                 with(it) {
                     disableUnnecessaryAndroidTests(target)
