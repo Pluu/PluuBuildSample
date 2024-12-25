@@ -21,6 +21,10 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 configureAndroid(this)
                 configureKotlin()
                 consumerProguardFiles()
+
+                testOptions {
+                    targetSdk = 35
+                }
             }
         }
     }
