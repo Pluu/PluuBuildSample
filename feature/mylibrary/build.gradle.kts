@@ -13,6 +13,7 @@ android {
 
 dependencies {
     compileOnly(projects.shared.buildConfigStub)
+    androidTestImplementation(projects.shared.buildConfigStub)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
