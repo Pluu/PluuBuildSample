@@ -14,12 +14,15 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
         with(target) {
             with(pluginManager) {
                 apply("com.android.application")
-                apply("org.jetbrains.kotlin.android")
             }
 
             extensions.configure<ApplicationExtension> {
                 configureAndroid(this)
                 defaultConfig.targetSdk = 35
+                testOptions {
+                    animationsDisabled = true
+                }
+
                 configureKotlin()
                 configureFlavor(this)
             }

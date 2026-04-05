@@ -1,24 +1,21 @@
 package com.pluu.convention.utils
 
+import com.android.build.api.dsl.CommonExtension
 import com.android.build.api.variant.AndroidComponentsExtension
 import com.pluu.Const.ByteCodeJavaVersion
 import org.gradle.api.Project
 
-internal fun Project.configureAndroid(commonExtension: AGPCommonExtension) {
+internal fun Project.configureAndroid(commonExtension: CommonExtension) {
     with(commonExtension) {
         compileSdk = 35
 
-        defaultConfig {
+        defaultConfig.apply {
             minSdk = 26
 
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
-        testOptions {
-            animationsDisabled = true
-        }
-
-        buildTypes {
+        buildTypes.apply {
             getByName("release") {
                 isMinifyEnabled = false
                 proguardFiles(
@@ -28,7 +25,7 @@ internal fun Project.configureAndroid(commonExtension: AGPCommonExtension) {
             }
         }
 
-        compileOptions {
+        compileOptions.apply {
             sourceCompatibility = ByteCodeJavaVersion
             targetCompatibility = ByteCodeJavaVersion
         }

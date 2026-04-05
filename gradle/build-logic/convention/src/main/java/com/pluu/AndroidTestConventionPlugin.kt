@@ -13,9 +13,6 @@ import java.io.File
 class AndroidTestConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            with(pluginManager) {
-                apply("org.jetbrains.kotlin.android")
-            }
 
             // Case 1.
             extensions.getByType(CommonExtension::class.java).apply {
