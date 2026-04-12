@@ -11,6 +11,14 @@ fun DependencyHandler.compileOnly(dependencyNotation: Any): Dependency? {
     return add("compileOnly", dependencyNotation)
 }
 
+fun DependencyHandler.androidTestImplementation(dependencyNotation: Any): Dependency? {
+    return add("androidTestImplementation", dependencyNotation)
+}
+
+fun DependencyHandler.testImplementation(dependencyNotation: Any): Dependency? {
+    return add("testImplementation", dependencyNotation)
+}
+
 fun DependencyHandler.project(
     path: String,
     configuration: String? = null,

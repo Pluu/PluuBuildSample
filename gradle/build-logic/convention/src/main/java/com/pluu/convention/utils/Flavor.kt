@@ -7,7 +7,7 @@ internal fun Project.configureFlavor(commonExtension: CommonExtension) {
     commonExtension.apply {
         flavorDimensions.add("default")
 
-        productFlavors {
+        productFlavors.apply {
             maybeCreate("develop")
             maybeCreate("develop_side").matchingFallbacks.add("develop")
             maybeCreate("production").matchingFallbacks.add("develop")
