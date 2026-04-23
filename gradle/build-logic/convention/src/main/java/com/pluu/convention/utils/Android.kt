@@ -7,7 +7,11 @@ import org.gradle.api.Project
 
 internal fun Project.configureAndroid(commonExtension: CommonExtension) {
     with(commonExtension) {
-        compileSdk = 35
+        compileSdk {
+            version = release(36) {
+                minorApiLevel = 1
+            }
+        }
 
         defaultConfig.apply {
             minSdk = 26
