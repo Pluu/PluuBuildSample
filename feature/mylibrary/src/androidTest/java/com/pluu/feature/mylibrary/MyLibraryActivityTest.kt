@@ -6,7 +6,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.web.assertion.WebViewAssertions.webMatches
 import androidx.test.espresso.web.model.Atoms.getTitle
 import androidx.test.espresso.web.sugar.Web.onWebView
-import androidx.test.ext.junit.rules.activityScenarioRule
+import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.hamcrest.CoreMatchers.containsString
 import org.junit.Rule
@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit
 @RunWith(AndroidJUnit4::class)
 class MyLibraryActivityTest {
     @get:Rule
-    val rule = activityScenarioRule<MyLibraryActivity>()
+    val rule: ActivityScenarioRule<MyLibraryActivity> = ActivityScenarioRule(MyLibraryActivity::class.java)
 
     @Test
     fun t1() {
