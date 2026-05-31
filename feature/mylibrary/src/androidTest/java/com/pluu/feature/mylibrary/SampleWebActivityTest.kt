@@ -5,7 +5,7 @@ import androidx.test.core.app.ApplicationProvider.getApplicationContext
 import androidx.test.espresso.web.assertion.WebViewAssertions.webMatches
 import androidx.test.espresso.web.model.Atoms.getTitle
 import androidx.test.espresso.web.sugar.Web.onWebView
-import androidx.test.ext.junit.rules.activityScenarioRule
+import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.hamcrest.CoreMatchers.containsString
 import org.junit.Rule
@@ -16,8 +16,8 @@ import java.util.concurrent.TimeUnit
 @RunWith(AndroidJUnit4::class)
 class SampleWebActivityTest {
     @get:Rule
-    val rule = activityScenarioRule<SampleWebActivity>(
-        intent = Intent(getApplicationContext(), SampleWebActivity::class.java).apply {
+    val rule = ActivityScenarioRule<SampleWebActivity>(
+        Intent(getApplicationContext(), SampleWebActivity::class.java).apply {
             putExtra("url", "file:///android_asset/sample.html")
         }
     )
