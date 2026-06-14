@@ -8,9 +8,7 @@ import org.gradle.api.Project
 internal fun Project.configureAndroid(commonExtension: CommonExtension) {
     with(commonExtension) {
         compileSdk {
-            version = release(36) {
-                minorApiLevel = 1
-            }
+            version = release(37)
         }
 
         defaultConfig.apply {

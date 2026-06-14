@@ -15,10 +15,7 @@ internal fun Project.configureKotlin() {
             allWarningsAsErrors.set(warningsAsErrors.toBoolean())
 
             optIn.addAll(
-                "kotlin.RequiresOptIn",
-                // Enable experimental coroutines APIs, including Flow
-                "kotlinx.coroutines.ExperimentalCoroutinesApi",
-                "kotlinx.coroutines.FlowPreview",
+                "kotlin.RequiresOptIn"
             )
         }
     }
